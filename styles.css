@@ -37,6 +37,14 @@
 
   --nav-height: 80px;
   --transition: 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* ── Button system tokens ── */
+  --btn-emerald:       #10b981;
+  --btn-emerald-dim:   rgba(16, 185, 129, 0.50);
+  --btn-emerald-glow:  rgba(16, 185, 129, 0.18);
+  --btn-cta-grad:      linear-gradient(135deg, #ff8c00 0%, #ffd700 100%);
+  --btn-cta-shadow:    rgba(255, 160, 0, 0.38);
+  --btn-dark-text:     #1c1c1c;
 }
 
 /* ─── RESET & BASE ─── */
@@ -194,6 +202,114 @@ select, input, textarea { font-family: inherit; }
 .btn--sm { padding: 9px 20px; font-size: 0.85rem; }
 .btn--full { width: 100%; }
 
+/* ─── BUTTON 1 — NAV / GHOST (emerald border, transparent fill) ─── */
+/*
+ * Use for: navigation actions, secondary header buttons.
+ * Shape:    rounded rectangle (--radius-sm = 8px).
+ * Palette:  transparent bg · emerald (#10b981) border · white text.
+ */
+.btn--nav {
+  background: transparent;
+  color: var(--text-primary);
+  border: 1.5px solid rgba(255, 140, 0, 0.55);
+  border-radius: var(--radius-sm);
+  padding: 9px 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  font-family: var(--font-body);
+  letter-spacing: 0.01em;
+  transition: border-color var(--transition), box-shadow var(--transition),
+              background var(--transition), color var(--transition);
+}
+/* suppress base shimmer overlay — handled by glow below */
+.btn--nav::before { display: none; }
+
+.btn--nav:hover {
+  border-color: #ff8c00;
+  background: rgba(255, 140, 0, 0.12);
+  box-shadow: 0 0 20px rgba(255, 140, 0, 0.22);
+  color: #fff;
+}
+/* focus — keyboard / assistive tech */
+.btn--nav:focus-visible {
+  outline: 2px solid #ff8c00;
+  outline-offset: 3px;
+}
+/* disabled */
+.btn--nav:disabled,
+.btn--nav[aria-disabled="true"] {
+  opacity: 0.38;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+/* size overrides stay rectangular */
+.btn--nav.btn--lg { border-radius: var(--radius-sm); }
+.btn--nav.btn--sm { border-radius: var(--radius-sm); }
+
+/* ─── BUTTON 2 — CTA / SOLID (orange-yellow gradient, pill) ─── */
+/*
+ * Use for: primary call-to-action, e.g. "See How It Works", "Get Free Audit".
+ * Shape:    pill (border-radius: 9999px).
+ * Palette:  orange→yellow gradient · dark gray (#1c1c1c) text · ↗ icon.
+ */
+.btn--cta {
+  background: var(--btn-cta-grad);
+  color: var(--btn-dark-text);
+  border: none;
+  border-radius: 9999px;
+  padding: 12px 28px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  font-family: var(--font-body);
+  letter-spacing: -0.01em;
+  gap: 6px;
+  transition: filter var(--transition), transform var(--transition),
+              box-shadow var(--transition);
+}
+/* external-link arrow icon */
+.btn--cta::after {
+  content: '\2197'; /* ↗ */
+  font-size: 0.85em;
+  line-height: 1;
+  transition: transform var(--transition);
+  flex-shrink: 0;
+}
+/* suppress base shimmer — gradient is the visual */
+.btn--cta::before { display: none; }
+
+.btn--cta:hover {
+  filter: brightness(1.08) saturate(1.08);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px var(--btn-cta-shadow);
+}
+.btn--cta:hover::after {
+  transform: translateX(2px) translateY(-2px);
+}
+/* focus */
+.btn--cta:focus-visible {
+  outline: 2px solid #ffd700;
+  outline-offset: 3px;
+}
+/* disabled */
+.btn--cta:disabled,
+.btn--cta[aria-disabled="true"] {
+  opacity: 0.45;
+  cursor: not-allowed;
+  pointer-events: none;
+  filter: grayscale(0.4);
+}
+/* keep pill at every size */
+.btn--cta.btn--lg {
+  padding: 15px 36px;
+  font-size: 1rem;
+  border-radius: 9999px;
+}
+.btn--cta.btn--sm {
+  padding: 8px 18px;
+  font-size: 0.82rem;
+  border-radius: 9999px;
+}
+
 /* ─── REVEAL ANIMATIONS ─── */
 .reveal {
   opacity: 0;
@@ -243,8 +359,8 @@ select, input, textarea { font-family: inherit; }
 
 /* ─── LOGO IMAGE ─── */
 .nav__logo-img {
-  height: 60px;
-  width: 180px;
+  height: 80px;
+  width: 240px;
   object-fit: contain;
   object-position: left center;
   display: block;
@@ -1167,7 +1283,7 @@ select, input, textarea { font-family: inherit; }
 @media (max-width: 768px) {
   :root { --nav-height: 64px; }
 
-  .nav__logo-img { height: 22px; }
+  .nav__logo-img { height: 32px; }
   .nav__logo-img--footer { height: 26px; }
 
   .nav__links { display: none; }
