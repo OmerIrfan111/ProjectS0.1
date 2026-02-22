@@ -96,6 +96,24 @@
 
   qsa('.counter').forEach(el => counterObserver.observe(el));
 
+  /* ─── VIDEO AUTOPLAY ON SCROLL ─── */
+  const video = qs('#videoIframe');
+  if (video) {
+    const videoObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            video.play().catch(err => console.log('Video play failed:', err));
+          } else {
+            video.pause();
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+    videoObserver.observe(video);
+  }
+
   /* ─── PORTFOLIO FILTER ─── */
   const filterBtns   = qsa('.filter-btn');
   const portfolioCards = qsa('.portfolio-card');
