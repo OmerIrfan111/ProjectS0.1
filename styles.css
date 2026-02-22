@@ -1281,10 +1281,10 @@ select, input, textarea { font-family: inherit; }
 }
 
 @media (max-width: 768px) {
-  :root { --nav-height: 64px; }
+  :root { --nav-height: 74px; }
 
-  .nav__logo-img { height: 32px; }
-  .nav__logo-img--footer { height: 26px; }
+  .nav__logo-img { height: 56px; width: 170px; }
+  .nav__logo-img--footer { height: 44px; }
 
   .nav__links { display: none; }
   .nav__cta { display: none; }
