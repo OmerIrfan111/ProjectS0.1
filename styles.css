@@ -678,7 +678,7 @@ select, input, textarea { font-family: inherit; }
 
 .video-wrapper {
   margin: 0 auto 80px;
-  max-width: 880px;
+  max-width: 100%;
   border-radius: var(--radius-xl);
   overflow: hidden;
   border: 1px solid var(--border);
@@ -730,6 +730,7 @@ select, input, textarea { font-family: inherit; }
   aspect-ratio: 16/9;
   border: none;
   display: block;
+  object-fit: contain;
 }
 
 .steps-grid {
@@ -1406,6 +1407,12 @@ select, input, textarea { font-family: inherit; }
   .portfolio-grid { grid-template-columns: 1fr; }
   .testimonials-grid { grid-template-columns: 1fr; }
   .cta-benefits { flex-direction: column; align-items: center; gap: 20px; }
+
+  .video-section .container { padding: 0; }
+  .video-section .section-label,
+  .video-section .section-title,
+  .video-section .section-body { padding: 0 24px; }
+  .video-wrapper { border-radius: 0; border-left: none; border-right: none; }
 
   .footer__inner { grid-template-columns: 1fr 1fr; gap: 32px; }
   .footer__bottom { flex-direction: column; gap: 12px; text-align: center; }
