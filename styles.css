@@ -940,13 +940,12 @@ select, input, textarea { font-family: inherit; }
   transform: scale(1.06);
 }
 
-/* Individual card images — space themed */
-.service-card--1::before { background-image: url('https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4?w=800&q=80'); }
-.service-card--2::before { background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&q=80'); }
-.service-card--3::before { background-image: url('https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=800&q=80'); }
-.service-card--4::before { background-image: url('https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=800&q=80'); }
-.service-card--5::before { background-image: url('https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?w=800&q=80'); }
-.service-card--6::before { background-image: url('https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?w=800&q=80'); }
+/* Individual card images — digital marketing themed */
+.service-card--1::before { background-image: url('https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&q=80'); } /* Meta/Facebook ads */
+.service-card--2::before { background-image: url('https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?w=800&q=80'); } /* Google search */
+.service-card--3::before { background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80'); } /* Lead generation/funnel */
+.service-card--4::before { background-image: url('https://images.unsplash.com/photo-1611926653458-09294b3142bf?w=800&q=80'); } /* Social media management */
+.service-card--5::before { background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80'); } /* Analytics/reporting */
 
 .service-card:hover {
   background: var(--bg-card-hover);
