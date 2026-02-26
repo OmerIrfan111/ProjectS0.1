@@ -216,4 +216,34 @@
     }
   }, { passive: true });
 
+  /* ─── JOTFORM MODAL ─── */
+  const jotformModal = qs('#jotformModal');
+  const openFormBtn1 = qs('#openFormBtn1');
+  const openFormBtn2 = qs('#openFormBtn2');
+  const closeFormBtn = qs('#closeFormBtn');
+  const modalOverlay = qs('.jotform-modal__overlay');
+
+  function openJotformModal(e) {
+    e.preventDefault();
+    jotformModal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeJotformModal() {
+    jotformModal.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  openFormBtn1?.addEventListener('click', openJotformModal);
+  openFormBtn2?.addEventListener('click', openJotformModal);
+  closeFormBtn?.addEventListener('click', closeJotformModal);
+  modalOverlay?.addEventListener('click', closeJotformModal);
+
+  // Close modal with ESC key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && jotformModal.classList.contains('active')) {
+      closeJotformModal();
+    }
+  });
+
 })();
