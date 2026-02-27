@@ -37,7 +37,7 @@
     <div class="container hero__inner">
       <div class="hero__badge reveal">
         <span class="badge-dot"></span>
-        Trusted by many businesses.
+        AI Powered Marketing Agency
       </div>
       <h1 class="hero__headline reveal">
         Turn Your Business Into a<br />
@@ -50,6 +50,14 @@
       <div class="hero__actions reveal">
         <a href="#" class="btn btn--cta btn--lg" id="openFormBtn1">Request a Free Business Growth Audit</a>
         <p class="hero__cta-note">No cost, no obligation, only actionable insights.</p>
+        <div class="hero__avatars">
+          <div class="avatar-group">
+            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client" class="avatar">
+            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Client" class="avatar">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client" class="avatar">
+            <a href="#testimonials" class="avatar avatar--arrow" aria-label="View testimonials">→</a>
+          </div>
+        </div>
       </div>
       <div class="hero__stats reveal">
         <div class="stat">
@@ -273,68 +281,58 @@
       <div class="portfolio-grid" id="portfolioGrid">
 
         <article class="portfolio-card reveal" data-category="marketing">
-          <div class="portfolio-card__img">
-            <img src="zyro1.jpg" alt="Local Business &amp; Clinics" class="portfolio-card__photo" />
+          <div class="portfolio-card__img" onclick="openImageModal('zyro3.jpg')">
+            <img src="zyro3.jpg" alt="Lead Generation for Clinics" class="portfolio-card__photo" />
+            <div class="portfolio-card__overlay">
+              <span class="portfolio-card__view">👁 View</span>
+            </div>
           </div>
           <div class="portfolio-card__info">
-            <span class="portfolio-card__cat">Local Business &amp; Clinics</span>
-            <h3 class="portfolio-card__title">Consistent lead generation for local service businesses and healthcare clinics</h3>
-            <p class="portfolio-card__result">Qualified leads, improved conversion rates</p>
+            <span class="portfolio-card__cat">Healthcare</span>
+            <h3 class="portfolio-card__title">Lead Generation for Clinics</h3>
+            <p class="portfolio-card__result">✓ Consistent flow of qualified patient leads<br/>✓ Improved appointment booking rates</p>
           </div>
         </article>
 
         <article class="portfolio-card reveal" data-category="marketing">
-          <div class="portfolio-card__img">
-            <img src="zyro4.png" alt="Restaurants &amp; Bakeries" class="portfolio-card__photo" />
+          <div class="portfolio-card__img" onclick="openImageModal('zyro1.jpg')">
+            <img src="zyro1.jpg" alt="Educational Institute" class="portfolio-card__photo" />
+            <div class="portfolio-card__overlay">
+              <span class="portfolio-card__view">👁 View</span>
+            </div>
           </div>
           <div class="portfolio-card__info">
-            <span class="portfolio-card__cat">Restaurants &amp; Bakeries</span>
-            <h3 class="portfolio-card__title">Scalable growth systems for food and hospitality businesses</h3>
-            <p class="portfolio-card__result">Increased footfall and online orders</p>
+            <span class="portfolio-card__cat">Education</span>
+            <h3 class="portfolio-card__title">1500+ Leads Generated for an Educational Institute</h3>
+            <p class="portfolio-card__result">✓ 1500+ high-quality student inquiries<br/>✓ Increased enrollment rates</p>
           </div>
         </article>
 
         <article class="portfolio-card reveal" data-category="marketing">
-          <div class="portfolio-card__img">
-            <img src="zyro3.jpg" alt="Educational Institutes" class="portfolio-card__photo" />
+          <div class="portfolio-card__img" onclick="openImageModal('zyro2.jpg')">
+            <img src="zyro2.jpg" alt="E-commerce Store" class="portfolio-card__photo" />
+            <div class="portfolio-card__overlay">
+              <span class="portfolio-card__view">👁 View</span>
+            </div>
           </div>
           <div class="portfolio-card__info">
-            <span class="portfolio-card__cat">Educational Institutes</span>
-            <h3 class="portfolio-card__title">Student enrollment and brand awareness campaigns for schools and academies</h3>
-            <p class="portfolio-card__result">Reduced advertising waste, higher enrollment</p>
+            <span class="portfolio-card__cat">E-commerce</span>
+            <h3 class="portfolio-card__title">7x ROAS for an E-commerce Store within 2 Weeks</h3>
+            <p class="portfolio-card__result">✓ 7x Return on Ad Spend achieved<br/>✓ Optimized within just 2 weeks</p>
           </div>
         </article>
 
         <article class="portfolio-card reveal" data-category="marketing">
-          <div class="portfolio-card__img">
-            <img src="brand.jpeg" alt="Real Estate Agencies" class="portfolio-card__photo" />
+          <div class="portfolio-card__img" onclick="openImageModal('zyro5.jpg')">
+            <img src="zyro5.jpg" alt="Shopify Store" class="portfolio-card__photo" />
+            <div class="portfolio-card__overlay">
+              <span class="portfolio-card__view">👁 View</span>
+            </div>
           </div>
           <div class="portfolio-card__info">
-            <span class="portfolio-card__cat">Real Estate Agencies</span>
-            <h3 class="portfolio-card__title">Lead generation and funnel strategy for real estate professionals</h3>
-            <p class="portfolio-card__result">More qualified property inquiries</p>
-          </div>
-        </article>
-
-        <article class="portfolio-card reveal" data-category="marketing">
-          <div class="portfolio-card__img">
-            <img src="zyro5.jpg" alt="Service-Based Companies" class="portfolio-card__photo" />
-          </div>
-          <div class="portfolio-card__info">
-            <span class="portfolio-card__cat">Service-Based Companies</span>
-            <h3 class="portfolio-card__title">End-to-end marketing management for professional service businesses</h3>
-            <p class="portfolio-card__result">Scalable and sustainable growth systems</p>
-          </div>
-        </article>
-
-        <article class="portfolio-card reveal" data-category="marketing">
-          <div class="portfolio-card__img">
-            <img src="zyro2.jpg" alt="E-commerce Brands" class="portfolio-card__photo" />
-          </div>
-          <div class="portfolio-card__info">
-            <span class="portfolio-card__cat">E-commerce Brands</span>
-            <h3 class="portfolio-card__title">Performance advertising and conversion optimization for online stores</h3>
-            <p class="portfolio-card__result">Higher ROAS and reduced acquisition cost</p>
+            <span class="portfolio-card__cat">E-commerce</span>
+            <h3 class="portfolio-card__title">10,000+ Sales for a White Label Shopify Store</h3>
+            <p class="portfolio-card__result">✓ 10,000+ successful transactions<br/>✓ Scaled white label business model</p>
           </div>
         </article>
 
@@ -469,9 +467,9 @@
         </a>
         <p class="footer__tagline">Complete marketing system managed on your behalf.<br />Advertising, branding, and growth strategy under one team.</p>
         <div class="footer__socials">
-          <a href="#" class="social-link" aria-label="LinkedIn">in</a>
-          <a href="#" class="social-link" aria-label="Twitter">𝕏</a>
-          <a href="#" class="social-link" aria-label="Instagram">IG</a>
+          <a href="https://www.instagram.com/zyro_mark_digital/" class="social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">IG</a>
+          <a href="https://www.facebook.com/profile.php?id=61587980398637" class="social-link" aria-label="Facebook" target="_blank" rel="noopener noreferrer">FB</a>
+          <a href="https://m.me/1048998924952692" class="social-link" aria-label="Messenger" target="_blank" rel="noopener noreferrer">MSG</a>
         </div>
       </div>
       <div class="footer__col">
@@ -510,5 +508,12 @@
     window.jotformEmbedHandler("iframe[id='JotFormIFrame-260564082217050']", "https://form.jotform.com/");
   </script>
   <script src="script.js"></script>
+
+  <!-- Image Modal -->
+  <div id="imageModal" class="image-modal">
+    <span class="image-modal__close" onclick="closeImageModal()">&times;</span>
+    <img class="image-modal__content" id="modalImage">
+  </div>
+
 </body>
 </html>

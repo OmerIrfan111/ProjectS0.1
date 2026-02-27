@@ -246,4 +246,35 @@
     }
   });
 
+  /* ─── IMAGE MODAL ─── */
+  window.openImageModal = function(imageSrc) {
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('modalImage');
+    modal.classList.add('active');
+    modal.style.display = 'flex';
+    modalImg.src = imageSrc;
+    document.body.style.overflow = 'hidden';
+  };
+
+  window.closeImageModal = function() {
+    const modal = document.getElementById('imageModal');
+    modal.classList.remove('active');
+    modal.style.display = 'none';
+    document.body.style.overflow = '';
+  };
+
+  // Close image modal on outside click
+  document.getElementById('imageModal')?.addEventListener('click', function(e) {
+    if (e.target === this) {
+      closeImageModal();
+    }
+  });
+
+  // Close image modal with ESC key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      closeImageModal();
+    }
+  });
+
 })();
